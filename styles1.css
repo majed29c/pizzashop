@@ -1,0 +1,307 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  background-image: url("background1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.navbar-container {
+  display: flex;
+  height: 4vw;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: rgba(206, 73, 25, 0.604);
+  width: 80%;
+  margin-left: 10vw;
+  border-radius: 40px;
+  margin-top: 2vw;
+  position: fixed;
+  z-index: 2;
+}
+#linktohome,
+#book {
+  text-decoration: none;
+  font-size: 2vw;
+  color: wheat;
+}
+.navbar-container-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 20vw;
+}
+.navbar-container-elements > p {
+  color: wheat;
+  font-size: 2vw;
+}
+.navbar-container-elements:hover > p {
+  color: rgba(238, 81, 8, 0.801);
+}
+.spacer {
+  height: 6vw;
+}
+
+#logo {
+  object-fit: contain;
+  width: 100%;
+
+  grid-area: 3/6/5/8;
+  height: 100%;
+}
+.bigcontainer {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(5vw, 8.33vw));
+  grid-template-rows: repeat(12, minmax(5vw, 8.33vw));
+  margin-top: 2vw;
+  width: 100%;
+}
+.subbigcontainer {
+  grid-area: 2/3/13/11;
+  background-color: wheat;
+  border-radius: 120px;
+  border: 10px solid rgba(238, 81, 8, 0.801);
+}
+.logocontainer {
+  grid-area: 3/6/5/8;
+}
+.name {
+  grid-area: 5/5/6/9;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+  text-align: center;
+}
+#totalnumber {
+  font-size: 4vw;
+}
+#form1,
+#form2,
+#form3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#fullname {
+  width: 24vw;
+  padding: 0.5vw;
+  font-size: 1.5vw;
+  background-color: wheat;
+  border: 1px solid black;
+}
+#order2 {
+  width: 24vw;
+  height: 10vw;
+  padding: 0.5vw;
+  font-size: 1.5vw;
+  resize: none;
+  border: 1px solid black;
+  background-color: wheat;
+}
+
+.order1 {
+  display: flex;
+  flex-direction: column;
+  grid-area: 6/5/8/9;
+  justify-content: center;
+  align-items: center;
+}
+
+#order2::placeholder {
+  color: #888; /* Optional: Customize placeholder color */
+  text-align: left; /* Ensure text alignment */
+}
+.address1 {
+  grid-area: 8/5/10/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#address2 {
+  width: 24vw;
+  height: 10vw;
+  padding: 0.5vw;
+  font-size: 1.5vw;
+  background-color: wheat;
+  resize: none;
+  border: 1px solid black;
+}
+.placeorder {
+  display: flex;
+  flex-direction: column;
+  grid-area: 11/6/12/8;
+  justify-content: center;
+  align-items: center;
+}
+#submitbutton {
+  height: 6vw;
+  width: 10vw;
+  border-radius: 20px;
+  font-size: larger;
+  background-color: rgb(0, 140, 255);
+  color: wheat;
+  border: none;
+  margin-top: 3vw;
+}
+#total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-area: 10/6/11/8;
+}
+
+#total > label {
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-container {
+    display: flex;
+    height: 7vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: rgba(206, 73, 25, 0.604);
+    width: 80%;
+    margin-left: 10vw;
+    border-radius: 40px;
+    margin-top: 2vw;
+    position: fixed;
+    z-index: 2;
+  }
+  .navbar-container-elements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 22vw;
+  }
+  .navbar-container-elements > p {
+    color: wheat;
+    font-size: 3vw;
+  }
+  .subbigcontainer {
+    grid-area: 2/2/22/12;
+    background-color: wheat;
+    border-radius: 60px;
+    border: 4px solid rgba(238, 81, 8, 0.801);
+  }
+  #submitbutton {
+    height: 10vw;
+    width: 28vw;
+    border-radius: 5px;
+    font-size: 3vw;
+    background-color: rgb(0, 140, 255);
+    color: wheat;
+    border: none;
+    margin-top: 3vw;
+  }
+  .bigcontainer {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(5vw, 8.33vw));
+    grid-template-rows: repeat(22, minmax(5vw, 8.33vw));
+    margin-top: 2vw;
+    width: 100%;
+  }
+  .logocontainer {
+    grid-area: 3/5/7/9;
+  }
+  #total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 10/6/11/8;
+  }
+
+  #total > label {
+    font-size: 2vw;
+  }
+  .placeorder {
+    display: flex;
+    flex-direction: column;
+    grid-area: 20/5/21/9;
+    justify-content: center;
+    align-items: center;
+  }
+  .address1 {
+    grid-area: 14/4/17/10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #address2 {
+    width: 45vw;
+    height: 18vw;
+    padding: 0.5vw;
+    font-size: 3vw;
+    resize: none;
+  }
+  #order2 {
+    width: 45vw;
+    height: 18vw;
+    padding: 0.5vw;
+    font-size: 3vw;
+    resize: none;
+  }
+
+  .order1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: 10/4/13/10;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #order2::placeholder {
+    color: #888; /* Optional: Customize placeholder color */
+    text-align: left; /* Ensure text alignment */
+  }
+  .name {
+    grid-area: 7/4/9/10;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+    text-align: center;
+  }
+  #fullname {
+    width: 45vw;
+    padding: 0.5vw;
+    font-size: 3vw;
+    height: 6vw;
+  }
+  #logo {
+    object-fit: contain;
+    width: 100%;
+
+    grid-area: 3/5/7/9;
+    height: 100%;
+  }
+  #total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: 18/4/20/10;
+  }
+
+  #total > label {
+    font-size: 4vw;
+  }
+  #linktohome,
+  #book {
+    text-decoration: none;
+    font-size: 3vw;
+    color: wheat;
+  }
+  #totalnumber {
+    font-size: 4vw;
+  }
+}
